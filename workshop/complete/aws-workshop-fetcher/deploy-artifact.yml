@@ -1,7 +1,0 @@
----
-
-- hosts: all
-  connection: local
-  tasks:
-  - name: Deploy {{ artifact }} to S3
-    s3: bucket=aws-workshop-demo object="/artifacts/{{ artifact }}" src="{{ artifact_basedir }}/{{ artifact }}" mode=put force=true
